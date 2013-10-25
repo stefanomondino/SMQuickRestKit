@@ -7,21 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59FF8234E7C948BA97E56BDE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22342C9F625048649B2A4635 /* libPods.a */; };
+		7B6AA7F4181AFB4800064D06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B6AA7EA181AFB4800064D06 /* InfoPlist.strings */; };
+		7B6AA7F5181AFB4800064D06 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B6AA7EC181AFB4800064D06 /* Images.xcassets */; };
+		7B6AA7F6181AFB4800064D06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6AA7ED181AFB4800064D06 /* main.m */; };
+		7B6AA7F7181AFB4800064D06 /* SMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6AA7EF181AFB4800064D06 /* SMAppDelegate.m */; };
+		7B6AA7F8181AFB4800064D06 /* SMQuickRestKit-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B6AA7F0181AFB4800064D06 /* SMQuickRestKit-Info.plist */; };
+		7B6AA7F9181AFB4800064D06 /* SMQuickRestKit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B6AA7F2181AFB4800064D06 /* SMQuickRestKit.xcdatamodeld */; };
+		7B6AA7FB181AFB8200064D06 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7B6AA7FA181AFB8200064D06 /* Podfile */; };
+		7B6AA7FE181AFCF500064D06 /* SMQuickObjectMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6AA7FD181AFCF500064D06 /* SMQuickObjectMapper.m */; };
+		7B6AA801181AFF3400064D06 /* SMArrayValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6AA800181AFF3400064D06 /* SMArrayValueTransformer.m */; };
+		7B6AA804181B006800064D06 /* NSObject+SMQuickDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6AA803181B006800064D06 /* NSObject+SMQuickDownload.m */; };
+		7B6AA807181B009500064D06 /* SMObjectRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6AA806181B009500064D06 /* SMObjectRequest.m */; };
+		7B6AA80A181B05C300064D06 /* SMUnsavedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6AA809181B05C300064D06 /* SMUnsavedModel.m */; };
+		7B6AA80E181B080600064D06 /* SMSavedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6AA80D181B080600064D06 /* SMSavedModel.m */; };
+		7B6AA810181B091600064D06 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B6AA80F181B091600064D06 /* Storyboard.storyboard */; };
+		7B6AA813181B0A2400064D06 /* SMListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6AA812181B0A2400064D06 /* SMListViewController.m */; };
+		7B6AA816181B0D1F00064D06 /* SMAppStoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6AA815181B0D1F00064D06 /* SMAppStoreModel.m */; };
 		7BCC2363181AFA86003E5A9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BCC2362181AFA86003E5A9F /* Foundation.framework */; };
 		7BCC2365181AFA86003E5A9F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BCC2364181AFA86003E5A9F /* CoreGraphics.framework */; };
 		7BCC2367181AFA86003E5A9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BCC2366181AFA86003E5A9F /* UIKit.framework */; };
 		7BCC2369181AFA86003E5A9F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BCC2368181AFA86003E5A9F /* CoreData.framework */; };
-		7BCC236F181AFA86003E5A9F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BCC236D181AFA86003E5A9F /* InfoPlist.strings */; };
-		7BCC2371181AFA86003E5A9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCC2370181AFA86003E5A9F /* main.m */; };
-		7BCC2375181AFA86003E5A9F /* SMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCC2374181AFA86003E5A9F /* SMAppDelegate.m */; };
-		7BCC2378181AFA86003E5A9F /* SMQuickRestKit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BCC2376181AFA86003E5A9F /* SMQuickRestKit.xcdatamodeld */; };
-		7BCC237A181AFA86003E5A9F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BCC2379181AFA86003E5A9F /* Images.xcassets */; };
 		7BCC2381181AFA86003E5A9F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BCC2380181AFA86003E5A9F /* XCTest.framework */; };
 		7BCC2382181AFA86003E5A9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BCC2362181AFA86003E5A9F /* Foundation.framework */; };
 		7BCC2383181AFA86003E5A9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BCC2366181AFA86003E5A9F /* UIKit.framework */; };
 		7BCC2384181AFA86003E5A9F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BCC2368181AFA86003E5A9F /* CoreData.framework */; };
-		7BCC238C181AFA86003E5A9F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BCC238A181AFA86003E5A9F /* InfoPlist.strings */; };
-		7BCC238E181AFA86003E5A9F /* SMQuickRestKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCC238D181AFA86003E5A9F /* SMQuickRestKitTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,24 +45,41 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22342C9F625048649B2A4635 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6645BA3A491E4867995F772D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		7B6AA7EB181AFB4800064D06 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7B6AA7EC181AFB4800064D06 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7B6AA7ED181AFB4800064D06 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7B6AA7EE181AFB4800064D06 /* SMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMAppDelegate.h; sourceTree = "<group>"; };
+		7B6AA7EF181AFB4800064D06 /* SMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAppDelegate.m; sourceTree = "<group>"; };
+		7B6AA7F0181AFB4800064D06 /* SMQuickRestKit-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SMQuickRestKit-Info.plist"; sourceTree = "<group>"; };
+		7B6AA7F1181AFB4800064D06 /* SMQuickRestKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SMQuickRestKit-Prefix.pch"; sourceTree = "<group>"; };
+		7B6AA7F3181AFB4800064D06 /* SMQuickRestKit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SMQuickRestKit.xcdatamodel; sourceTree = "<group>"; };
+		7B6AA7FA181AFB8200064D06 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		7B6AA7FC181AFCF500064D06 /* SMQuickObjectMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMQuickObjectMapper.h; sourceTree = "<group>"; };
+		7B6AA7FD181AFCF500064D06 /* SMQuickObjectMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMQuickObjectMapper.m; sourceTree = "<group>"; };
+		7B6AA7FF181AFF3400064D06 /* SMArrayValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMArrayValueTransformer.h; sourceTree = "<group>"; };
+		7B6AA800181AFF3400064D06 /* SMArrayValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMArrayValueTransformer.m; sourceTree = "<group>"; };
+		7B6AA802181B006800064D06 /* NSObject+SMQuickDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SMQuickDownload.h"; sourceTree = "<group>"; };
+		7B6AA803181B006800064D06 /* NSObject+SMQuickDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SMQuickDownload.m"; sourceTree = "<group>"; };
+		7B6AA805181B009500064D06 /* SMObjectRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMObjectRequest.h; sourceTree = "<group>"; };
+		7B6AA806181B009500064D06 /* SMObjectRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMObjectRequest.m; sourceTree = "<group>"; };
+		7B6AA808181B05C300064D06 /* SMUnsavedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMUnsavedModel.h; sourceTree = "<group>"; };
+		7B6AA809181B05C300064D06 /* SMUnsavedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMUnsavedModel.m; sourceTree = "<group>"; };
+		7B6AA80C181B080600064D06 /* SMSavedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSavedModel.h; sourceTree = "<group>"; };
+		7B6AA80D181B080600064D06 /* SMSavedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSavedModel.m; sourceTree = "<group>"; };
+		7B6AA80F181B091600064D06 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		7B6AA811181B0A2400064D06 /* SMListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMListViewController.h; sourceTree = "<group>"; };
+		7B6AA812181B0A2400064D06 /* SMListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMListViewController.m; sourceTree = "<group>"; };
+		7B6AA814181B0D1F00064D06 /* SMAppStoreModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMAppStoreModel.h; sourceTree = "<group>"; };
+		7B6AA815181B0D1F00064D06 /* SMAppStoreModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAppStoreModel.m; sourceTree = "<group>"; };
 		7BCC235F181AFA86003E5A9F /* SMQuickRestKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMQuickRestKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCC2362181AFA86003E5A9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7BCC2364181AFA86003E5A9F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7BCC2366181AFA86003E5A9F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7BCC2368181AFA86003E5A9F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		7BCC236C181AFA86003E5A9F /* SMQuickRestKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SMQuickRestKit-Info.plist"; sourceTree = "<group>"; };
-		7BCC236E181AFA86003E5A9F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7BCC2370181AFA86003E5A9F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7BCC2372181AFA86003E5A9F /* SMQuickRestKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SMQuickRestKit-Prefix.pch"; sourceTree = "<group>"; };
-		7BCC2373181AFA86003E5A9F /* SMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMAppDelegate.h; sourceTree = "<group>"; };
-		7BCC2374181AFA86003E5A9F /* SMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMAppDelegate.m; sourceTree = "<group>"; };
-		7BCC2377181AFA86003E5A9F /* SMQuickRestKit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SMQuickRestKit.xcdatamodel; sourceTree = "<group>"; };
-		7BCC2379181AFA86003E5A9F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7BCC237F181AFA86003E5A9F /* SMQuickRestKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMQuickRestKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCC2380181AFA86003E5A9F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		7BCC2389181AFA86003E5A9F /* SMQuickRestKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SMQuickRestKitTests-Info.plist"; sourceTree = "<group>"; };
-		7BCC238B181AFA86003E5A9F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7BCC238D181AFA86003E5A9F /* SMQuickRestKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMQuickRestKitTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +91,7 @@
 				7BCC2369181AFA86003E5A9F /* CoreData.framework in Frameworks */,
 				7BCC2367181AFA86003E5A9F /* UIKit.framework in Frameworks */,
 				7BCC2363181AFA86003E5A9F /* Foundation.framework in Frameworks */,
+				59FF8234E7C948BA97E56BDE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,13 +109,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B6AA7E9181AFB4800064D06 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				7B6AA7EA181AFB4800064D06 /* InfoPlist.strings */,
+				7B6AA7EC181AFB4800064D06 /* Images.xcassets */,
+				7B6AA7ED181AFB4800064D06 /* main.m */,
+				7B6AA7EE181AFB4800064D06 /* SMAppDelegate.h */,
+				7B6AA7EF181AFB4800064D06 /* SMAppDelegate.m */,
+				7B6AA814181B0D1F00064D06 /* SMAppStoreModel.h */,
+				7B6AA815181B0D1F00064D06 /* SMAppStoreModel.m */,
+				7B6AA80F181B091600064D06 /* Storyboard.storyboard */,
+				7B6AA811181B0A2400064D06 /* SMListViewController.h */,
+				7B6AA812181B0A2400064D06 /* SMListViewController.m */,
+				7B6AA7F0181AFB4800064D06 /* SMQuickRestKit-Info.plist */,
+				7B6AA7F1181AFB4800064D06 /* SMQuickRestKit-Prefix.pch */,
+				7B6AA7F2181AFB4800064D06 /* SMQuickRestKit.xcdatamodeld */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
 		7BCC2356181AFA86003E5A9F = {
 			isa = PBXGroup;
 			children = (
+				7B6AA7FA181AFB8200064D06 /* Podfile */,
+				7B6AA7E9181AFB4800064D06 /* Example */,
 				7BCC236A181AFA86003E5A9F /* SMQuickRestKit */,
-				7BCC2387181AFA86003E5A9F /* SMQuickRestKitTests */,
 				7BCC2361181AFA86003E5A9F /* Frameworks */,
 				7BCC2360181AFA86003E5A9F /* Products */,
+				6645BA3A491E4867995F772D /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +158,7 @@
 				7BCC2366181AFA86003E5A9F /* UIKit.framework */,
 				7BCC2368181AFA86003E5A9F /* CoreData.framework */,
 				7BCC2380181AFA86003E5A9F /* XCTest.framework */,
+				22342C9F625048649B2A4635 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,42 +166,20 @@
 		7BCC236A181AFA86003E5A9F /* SMQuickRestKit */ = {
 			isa = PBXGroup;
 			children = (
-				7BCC2373181AFA86003E5A9F /* SMAppDelegate.h */,
-				7BCC2374181AFA86003E5A9F /* SMAppDelegate.m */,
-				7BCC2379181AFA86003E5A9F /* Images.xcassets */,
-				7BCC2376181AFA86003E5A9F /* SMQuickRestKit.xcdatamodeld */,
-				7BCC236B181AFA86003E5A9F /* Supporting Files */,
+				7B6AA7FF181AFF3400064D06 /* SMArrayValueTransformer.h */,
+				7B6AA800181AFF3400064D06 /* SMArrayValueTransformer.m */,
+				7B6AA7FC181AFCF500064D06 /* SMQuickObjectMapper.h */,
+				7B6AA7FD181AFCF500064D06 /* SMQuickObjectMapper.m */,
+				7B6AA802181B006800064D06 /* NSObject+SMQuickDownload.h */,
+				7B6AA803181B006800064D06 /* NSObject+SMQuickDownload.m */,
+				7B6AA80C181B080600064D06 /* SMSavedModel.h */,
+				7B6AA80D181B080600064D06 /* SMSavedModel.m */,
+				7B6AA808181B05C300064D06 /* SMUnsavedModel.h */,
+				7B6AA809181B05C300064D06 /* SMUnsavedModel.m */,
+				7B6AA805181B009500064D06 /* SMObjectRequest.h */,
+				7B6AA806181B009500064D06 /* SMObjectRequest.m */,
 			);
 			path = SMQuickRestKit;
-			sourceTree = "<group>";
-		};
-		7BCC236B181AFA86003E5A9F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				7BCC236C181AFA86003E5A9F /* SMQuickRestKit-Info.plist */,
-				7BCC236D181AFA86003E5A9F /* InfoPlist.strings */,
-				7BCC2370181AFA86003E5A9F /* main.m */,
-				7BCC2372181AFA86003E5A9F /* SMQuickRestKit-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		7BCC2387181AFA86003E5A9F /* SMQuickRestKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				7BCC238D181AFA86003E5A9F /* SMQuickRestKitTests.m */,
-				7BCC2388181AFA86003E5A9F /* Supporting Files */,
-			);
-			path = SMQuickRestKitTests;
-			sourceTree = "<group>";
-		};
-		7BCC2388181AFA86003E5A9F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				7BCC2389181AFA86003E5A9F /* SMQuickRestKitTests-Info.plist */,
-				7BCC238A181AFA86003E5A9F /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,9 +189,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7BCC2391181AFA86003E5A9F /* Build configuration list for PBXNativeTarget "SMQuickRestKit" */;
 			buildPhases = (
+				50ED4DD2F370481EB9384A40 /* Check Pods Manifest.lock */,
 				7BCC235B181AFA86003E5A9F /* Sources */,
 				7BCC235C181AFA86003E5A9F /* Frameworks */,
 				7BCC235D181AFA86003E5A9F /* Resources */,
+				4525E16FA19340E6A3669382 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -229,8 +260,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BCC236F181AFA86003E5A9F /* InfoPlist.strings in Resources */,
-				7BCC237A181AFA86003E5A9F /* Images.xcassets in Resources */,
+				7B6AA7F4181AFB4800064D06 /* InfoPlist.strings in Resources */,
+				7B6AA7F5181AFB4800064D06 /* Images.xcassets in Resources */,
+				7B6AA7FB181AFB8200064D06 /* Podfile in Resources */,
+				7B6AA7F8181AFB4800064D06 /* SMQuickRestKit-Info.plist in Resources */,
+				7B6AA810181B091600064D06 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,20 +272,60 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BCC238C181AFA86003E5A9F /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4525E16FA19340E6A3669382 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50ED4DD2F370481EB9384A40 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7BCC235B181AFA86003E5A9F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BCC2378181AFA86003E5A9F /* SMQuickRestKit.xcdatamodeld in Sources */,
-				7BCC2375181AFA86003E5A9F /* SMAppDelegate.m in Sources */,
-				7BCC2371181AFA86003E5A9F /* main.m in Sources */,
+				7B6AA80E181B080600064D06 /* SMSavedModel.m in Sources */,
+				7B6AA7F9181AFB4800064D06 /* SMQuickRestKit.xcdatamodeld in Sources */,
+				7B6AA7FE181AFCF500064D06 /* SMQuickObjectMapper.m in Sources */,
+				7B6AA80A181B05C300064D06 /* SMUnsavedModel.m in Sources */,
+				7B6AA813181B0A2400064D06 /* SMListViewController.m in Sources */,
+				7B6AA816181B0D1F00064D06 /* SMAppStoreModel.m in Sources */,
+				7B6AA807181B009500064D06 /* SMObjectRequest.m in Sources */,
+				7B6AA7F7181AFB4800064D06 /* SMAppDelegate.m in Sources */,
+				7B6AA801181AFF3400064D06 /* SMArrayValueTransformer.m in Sources */,
+				7B6AA7F6181AFB4800064D06 /* main.m in Sources */,
+				7B6AA804181B006800064D06 /* NSObject+SMQuickDownload.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +333,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BCC238E181AFA86003E5A9F /* SMQuickRestKitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,18 +347,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7BCC236D181AFA86003E5A9F /* InfoPlist.strings */ = {
+		7B6AA7EA181AFB4800064D06 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7BCC236E181AFA86003E5A9F /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		7BCC238A181AFA86003E5A9F /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7BCC238B181AFA86003E5A9F /* en */,
+				7B6AA7EB181AFB4800064D06 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -369,12 +434,14 @@
 		};
 		7BCC2392181AFA86003E5A9F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6645BA3A491E4867995F772D /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SMQuickRestKit/SMQuickRestKit-Prefix.pch";
-				INFOPLIST_FILE = "SMQuickRestKit/SMQuickRestKit-Info.plist";
+				GCC_PREFIX_HEADER = "Example/SMQuickRestKit-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Example/SMQuickRestKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -382,12 +449,14 @@
 		};
 		7BCC2393181AFA86003E5A9F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6645BA3A491E4867995F772D /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SMQuickRestKit/SMQuickRestKit-Prefix.pch";
-				INFOPLIST_FILE = "SMQuickRestKit/SMQuickRestKit-Info.plist";
+				GCC_PREFIX_HEADER = "Example/SMQuickRestKit-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Example/SMQuickRestKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -454,6 +523,7 @@
 				7BCC2393181AFA86003E5A9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7BCC2394181AFA86003E5A9F /* Build configuration list for PBXNativeTarget "SMQuickRestKitTests" */ = {
 			isa = XCConfigurationList;
@@ -462,16 +532,17 @@
 				7BCC2396181AFA86003E5A9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		7BCC2376181AFA86003E5A9F /* SMQuickRestKit.xcdatamodeld */ = {
+		7B6AA7F2181AFB4800064D06 /* SMQuickRestKit.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				7BCC2377181AFA86003E5A9F /* SMQuickRestKit.xcdatamodel */,
+				7B6AA7F3181AFB4800064D06 /* SMQuickRestKit.xcdatamodel */,
 			);
-			currentVersion = 7BCC2377181AFA86003E5A9F /* SMQuickRestKit.xcdatamodel */;
+			currentVersion = 7B6AA7F3181AFB4800064D06 /* SMQuickRestKit.xcdatamodel */;
 			path = SMQuickRestKit.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
