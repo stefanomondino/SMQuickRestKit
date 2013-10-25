@@ -15,4 +15,5 @@ Pod::Spec.new do |s|
   s.dependency 'MagicalRecord'
   s.frameworks = 'SystemConfiguration' , 'MobileCoreServices'
 
+
 end
