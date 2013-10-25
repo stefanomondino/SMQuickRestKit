@@ -14,7 +14,6 @@
 		7B6AA7F7181AFB4800064D06 /* SMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6AA7EF181AFB4800064D06 /* SMAppDelegate.m */; };
 		7B6AA7F8181AFB4800064D06 /* SMQuickRestKit-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B6AA7F0181AFB4800064D06 /* SMQuickRestKit-Info.plist */; };
 		7B6AA7F9181AFB4800064D06 /* SMQuickRestKit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B6AA7F2181AFB4800064D06 /* SMQuickRestKit.xcdatamodeld */; };
-		7B6AA7FB181AFB8200064D06 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7B6AA7FA181AFB8200064D06 /* Podfile */; };
 		7B6AA7FE181AFCF500064D06 /* SMQuickObjectMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6AA7FD181AFCF500064D06 /* SMQuickObjectMapper.m */; };
 		7B6AA801181AFF3400064D06 /* SMArrayValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6AA800181AFF3400064D06 /* SMArrayValueTransformer.m */; };
 		7B6AA804181B006800064D06 /* NSObject+SMQuickDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6AA803181B006800064D06 /* NSObject+SMQuickDownload.m */; };
@@ -73,6 +72,7 @@
 		7B6AA812181B0A2400064D06 /* SMListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMListViewController.m; sourceTree = "<group>"; };
 		7B6AA814181B0D1F00064D06 /* SMAppStoreModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMAppStoreModel.h; sourceTree = "<group>"; };
 		7B6AA815181B0D1F00064D06 /* SMAppStoreModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAppStoreModel.m; sourceTree = "<group>"; };
+		7B6AA817181B1C2000064D06 /* SYNiOSCommonTools.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SYNiOSCommonTools.podspec; sourceTree = "<group>"; };
 		7BCC235F181AFA86003E5A9F /* SMQuickRestKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMQuickRestKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCC2362181AFA86003E5A9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7BCC2364181AFA86003E5A9F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -133,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				7B6AA7FA181AFB8200064D06 /* Podfile */,
+				7B6AA817181B1C2000064D06 /* SYNiOSCommonTools.podspec */,
 				7B6AA7E9181AFB4800064D06 /* Example */,
 				7BCC236A181AFA86003E5A9F /* SMQuickRestKit */,
 				7BCC2361181AFA86003E5A9F /* Frameworks */,
@@ -262,7 +263,6 @@
 			files = (
 				7B6AA7F4181AFB4800064D06 /* InfoPlist.strings in Resources */,
 				7B6AA7F5181AFB4800064D06 /* Images.xcassets in Resources */,
-				7B6AA7FB181AFB8200064D06 /* Podfile in Resources */,
 				7B6AA7F8181AFB4800064D06 /* SMQuickRestKit-Info.plist in Resources */,
 				7B6AA810181B091600064D06 /* Storyboard.storyboard in Resources */,
 			);
