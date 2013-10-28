@@ -19,7 +19,7 @@ Installation
 Installation is handled by CocoaPods.
 Add this line to your podfile
 
-	pod 'SMQuickRestKit',:git => 'git@github.com:stefanomondino/SMQuickRestKit.git', :branch => 'master'
+	pod 'SMQuickRestKit',:git => 'https://github.com/stefanomondino/SMQuickRestKit.git', :branch => 'master'
 
 
 Usage
