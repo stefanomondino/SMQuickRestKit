@@ -11,4 +11,6 @@
 @interface SMUnsavedModel : NSObject
 + (void) setupMapping: (RKObjectMapping*) mapping forBaseurl:(NSString *)baseurl;
 +(id) mappingWithKeyPath:(NSString *)keypath forBaseurl:(NSString*)baseurl path:(NSString*) path;
+//Used in child mappings
++(RKObjectMapping *) mappingForBaseurl:(NSString *)baseurl;
 @end

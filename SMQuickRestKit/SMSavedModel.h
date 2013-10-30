@@ -12,4 +12,6 @@
 @interface SMSavedModel : NSManagedObject
 +(id) mappingWithKeyPath:(NSString *)keypath forBaseurl:(NSString*)baseurl path:(NSString*) path;
 + (void) setupMapping: (RKObjectMapping*) mapping forBaseurl:(NSString *)baseurl;
+//Used in child mappings
++(RKEntityMapping *) mappingForBaseurl:(NSString *)baseurl;
 @end
