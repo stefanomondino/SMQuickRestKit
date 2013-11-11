@@ -69,10 +69,10 @@
            [formData appendPartWithFormData:objectRequest.multipartDataDictionary[@"data"] name:objectRequest.multipartDataDictionary[@"name"]] ;
         }];
         if (objectRequest.isManaged){
-            [objectManager managedObjectRequestOperationWithRequest:request managedObjectContext: objectManager.managedObjectStore.mainQueueManagedObjectContext success:nil failure:nil];
+           operation =  [objectManager managedObjectRequestOperationWithRequest:request managedObjectContext: objectManager.managedObjectStore.mainQueueManagedObjectContext success:nil failure:nil];
         }
         else {
-            [objectManager objectRequestOperationWithRequest:request success:nil failure:nil];
+            operation = [objectManager objectRequestOperationWithRequest:request success:nil failure:nil];
         }
         
     }
