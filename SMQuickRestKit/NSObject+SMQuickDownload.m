@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "NSObject+SMQuickDownload.h"
 #import <objc/runtime.h>
+#import <CoreData.h>
 #import <RestKit.h>
 #import "SMQuickObjectMapper.h"
 #define kSMOperationDictionaryKey @"kSMOperationDictionaryKey"
@@ -72,7 +73,7 @@
            operation =  [objectManager managedObjectRequestOperationWithRequest:request managedObjectContext: objectManager.managedObjectStore.mainQueueManagedObjectContext success:nil failure:nil];
         }
         else {
-            operation = [objectManager objectRequestOperationWithRequest:request success:nil failure:nil];
+            operation =     [objectManager objectRequestOperationWithRequest:request success:nil failure:nil];
         }
         
     }
