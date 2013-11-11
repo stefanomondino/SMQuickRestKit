@@ -19,10 +19,13 @@
     objectRequest.shouldShowLoader = YES;
     return objectRequest;
 }
-
-+ (SMObjectRequest*) objectRequestWithBaseurl:(NSString*) baseurl path:(NSString*) path parameters:(NSDictionary*) parameters method:(SMHTTPMETHOD) method shouldShowLoader:(BOOL) shouldShowLoader{
++ (SMObjectRequest *)objectRequestWithBaseurl:(NSString *)baseurl path:(NSString *)path parameters:(NSDictionary *)parameters method:(SMHTTPMETHOD)method shouldShowLoader:(BOOL)shouldShowLoader {
+    return [self objectRequestWithBaseurl:baseurl path:path parameters:parameters method:method shouldShowLoader:shouldShowLoader multipartDataDictionary:nil isManaged:NO];
+}
++ (SMObjectRequest*) objectRequestWithBaseurl:(NSString*) baseurl path:(NSString*) path parameters:(NSDictionary*) parameters method:(SMHTTPMETHOD) method shouldShowLoader:(BOOL) shouldShowLoader multipartData:(id)multipartDataDictionary isManaged:(BOOL) isManaged{
     SMObjectRequest* objectRequest = [self objectRequestWithBaseurl:baseurl path:path parameters:parameters method:method];
     objectRequest.shouldShowLoader = shouldShowLoader;
+    objectRequest.multipartDataDictionary = multipartDataDictionary;
     return objectRequest;
 }
 

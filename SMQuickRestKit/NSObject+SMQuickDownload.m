@@ -12,6 +12,7 @@
 #import "SMQuickObjectMapper.h"
 #define kSMOperationDictionaryKey @"kSMOperationDictionaryKey"
 #define kSMAssociatedRequestingObject @"kSMAssociatedRequestingObject"
+#import <RKObjectManager.h>
 @interface NSObject(SMPrivateQuickDownload)
 @property (nonatomic,strong) NSMutableDictionary* operationDictionary;
 @end
@@ -62,8 +63,18 @@
         }
         [weakSelf downloadDidFailWithError:error objectRequest:objectRequest];
     };
-    
-    RKObjectRequestOperation* __weak operation = [objectManager appropriateObjectRequestOperationWithObject:nil method:(objectRequest.method == SM_GET?RKRequestMethodGET :RKRequestMethodPOST) path:objectRequest.path parameters:objectRequest.parameters];
+    RKObjectRequestOperation* __weak operation;
+    if (objectRequest.multipartDataDictionary) {
+        NSURLRequest* request = [objectManager multipartFormRequestWithObject:nil method:(objectRequest.method == SM_GET?RKRequestMethodGET :RKRequestMethodPOST) path:objectRequest.path parameters:objectRequest.parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+           [formData appendPartWithFormData:objectRequest.multipartDataDictionary[@"data"] name:objectRequest.multipartDataDictionary[@"name"]] ;
+        }];
+        [objectManager managedObjectRequestOperationWithRequest:request managedObjectContext: objectManager.managedObjectStore.mainQueueManagedObjectContext success:nil failure:nil];
+        [objectManager objectRequestOperationWithRequest:request success:nil failure:nil];
+        
+    }
+    else {
+        operation = [objectManager appropriateObjectRequestOperationWithObject:nil method:(objectRequest.method == SM_GET?RKRequestMethodGET :RKRequestMethodPOST) path: objectRequest.path parameters:objectRequest.parameters];
+    }
     [operation setCompletionBlockWithSuccess:success failure:failure];
     [operation.HTTPRequestOperation setDownloadProgressBlock:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
         //if (self.operationDictionary[operation] == nil) {

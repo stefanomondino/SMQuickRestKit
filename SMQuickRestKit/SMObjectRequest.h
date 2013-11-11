@@ -21,9 +21,11 @@ typedef enum {
 @property (nonatomic,strong) NSString* path;
 @property (nonatomic,strong) NSDictionary* parameters;
 @property (nonatomic,assign) BOOL shouldShowLoader;
+@property (nonatomic,assign) BOOL isManaged;
+@property (nonatomic,strong) NSDictionary* multipartDataDictionary;
 @property (assign) SMHTTPMETHOD method;
 
 + (SMObjectRequest*) objectRequestWithBaseurl:(NSString*) baseurl path:(NSString*) path parameters:(NSDictionary*) parameters method:(SMHTTPMETHOD) method ;
 + (SMObjectRequest*) objectRequestWithBaseurl:(NSString*) baseurl path:(NSString*) path parameters:(NSDictionary*) parameters method:(SMHTTPMETHOD) method shouldShowLoader:(BOOL) shouldShowLoader;
-
++ (SMObjectRequest*) objectRequestWithBaseurl:(NSString*) baseurl path:(NSString*) path parameters:(NSDictionary*) parameters method:(SMHTTPMETHOD) method shouldShowLoader:(BOOL) shouldShowLoader multipartDataDictionary:(NSDictionary*) multipartDataDictionary isManaged:(BOOL) isManaged;
 @end
