@@ -68,8 +68,12 @@
         NSURLRequest* request = [objectManager multipartFormRequestWithObject:nil method:(objectRequest.method == SM_GET?RKRequestMethodGET :RKRequestMethodPOST) path:objectRequest.path parameters:objectRequest.parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
            [formData appendPartWithFormData:objectRequest.multipartDataDictionary[@"data"] name:objectRequest.multipartDataDictionary[@"name"]] ;
         }];
-        [objectManager managedObjectRequestOperationWithRequest:request managedObjectContext: objectManager.managedObjectStore.mainQueueManagedObjectContext success:nil failure:nil];
-        [objectManager objectRequestOperationWithRequest:request success:nil failure:nil];
+        if (objectRequest.isManaged){
+            [objectManager managedObjectRequestOperationWithRequest:request managedObjectContext: objectManager.managedObjectStore.mainQueueManagedObjectContext success:nil failure:nil];
+        }
+        else {
+            [objectManager objectRequestOperationWithRequest:request success:nil failure:nil];
+        }
         
     }
     else {
