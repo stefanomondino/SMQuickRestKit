@@ -15,6 +15,11 @@ typedef enum {
     SM_DELETE
 } SMHTTPMETHOD;
 
+#define kMultipartData @"kMultipartData"
+#define kMultipartName @"kMultipartName"
+#define kMultipartFilename @"kMultipartFilename"
+#define kMultipartMIMEType @"kMultipartMIMEType"
+
 @interface SMObjectRequest : NSObject
 
 @property (nonatomic,strong) NSString* baseurl;

@@ -67,7 +67,7 @@
     RKObjectRequestOperation* __weak operation;
     if (objectRequest.multipartDataDictionary) {
         NSURLRequest* request = [objectManager multipartFormRequestWithObject:nil method:(objectRequest.method == SM_GET?RKRequestMethodGET :RKRequestMethodPOST) path:objectRequest.path parameters:objectRequest.parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-           [formData appendPartWithFormData:objectRequest.multipartDataDictionary[@"data"] name:objectRequest.multipartDataDictionary[@"name"]] ;
+            [formData appendPartWithFileData:objectRequest.multipartDataDictionary[kMultipartData] name:objectRequest.multipartDataDictionary[kMultipartName] fileName:objectRequest.multipartDataDictionary[kMultipartFilename] mimeType:objectRequest.multipartDataDictionary[kMultipartMIMEType]];
         }];
         if (objectRequest.isManaged){
            operation =  [objectManager managedObjectRequestOperationWithRequest:request managedObjectContext: objectManager.managedObjectStore.mainQueueManagedObjectContext success:nil failure:nil];
