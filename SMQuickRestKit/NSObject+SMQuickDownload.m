@@ -36,11 +36,11 @@
     
 }
 
-- (void) downloadDataWithObjectRequest:(SMObjectRequest*) objectRequest {
+- (RKObjectRequestOperation*) downloadDataWithObjectRequest:(SMObjectRequest*) objectRequest {
     
     RKObjectManager *objectManager = [SMQuickObjectMapper objectManagerWithBaseurl:objectRequest.baseurl];
     
-    if (!objectManager) return;
+    if (!objectManager) return nil;
     
     if (objectRequest.shouldShowLoader){
         [self showLoadingView ];
@@ -98,7 +98,7 @@
     }];
     objc_setAssociatedObject(operation,kSMAssociatedRequestingObject, self, OBJC_ASSOCIATION_RETAIN);
     [objectManager enqueueObjectRequestOperation:operation];
-    
+    return operation;
 }
 
 - (void) downloadDidProgressWithPercentage:(CGFloat) percentage {

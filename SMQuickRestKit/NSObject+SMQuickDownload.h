@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "SMObjectRequest.h"
+@class  RKObjectRequestOperation;
 @interface NSObject (SMQuickDownload)
-- (void) downloadDataWithObjectRequest:(SMObjectRequest*) objectRequest;
+- (RKObjectRequestOperation*) downloadDataWithObjectRequest:(SMObjectRequest*) objectRequest;
 
 - (void) downloadDidProgressWithPercentage:(CGFloat) percentage;
 - (void) downloadDidCompleteWithMappingResults: (NSArray*) mappingResults objectRequest:(SMObjectRequest*) objectRequest;
