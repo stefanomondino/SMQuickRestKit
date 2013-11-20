@@ -15,6 +15,7 @@
 - (void) downloadDidProgressWithPercentage:(CGFloat) percentage;
 - (void) downloadDidCompleteWithMappingResults: (NSArray*) mappingResults objectRequest:(SMObjectRequest*) objectRequest;
 - (void) downloadDidFailWithError: (NSError*) error objectRequest:(SMObjectRequest*) objectRequest;
+- (void) simultaneousDownloadsDidComplete;
 - (void) showLoadingView;
 - (void) showSimultaneousLoadingView;
 - (void) hideLoadingView;
