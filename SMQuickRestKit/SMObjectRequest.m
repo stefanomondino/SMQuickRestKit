@@ -7,7 +7,9 @@
 //
 
 #import "SMObjectRequest.h"
-
+@interface SMObjectRequest()
+@property (nonatomic,strong) NSData*serializedParameters;
+@end
 @implementation SMObjectRequest
 
 + (SMObjectRequest*) objectRequestWithBaseurl:(NSString*) baseurl path:(NSString*) path parameters:(NSDictionary*) parameters method:(SMHTTPMETHOD) method {
@@ -27,6 +29,16 @@
     objectRequest.shouldShowLoader = shouldShowLoader;
     objectRequest.multipartDataDictionary = multipartDataDictionary;
     return objectRequest;
+}
+
+- (void) setJsonParameters:(NSDictionary*) customParameters {
+    
+   self.serializedParameters = [NSJSONSerialization dataWithJSONObject:customParameters
+                                                          options:NSJSONWritingPrettyPrinted
+                                                            error:nil];
+    
+    //NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    //NSLog(@"%@",jsonString);
 }
 
 @end

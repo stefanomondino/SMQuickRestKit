@@ -33,4 +33,5 @@ typedef enum {
 + (SMObjectRequest*) objectRequestWithBaseurl:(NSString*) baseurl path:(NSString*) path parameters:(NSDictionary*) parameters method:(SMHTTPMETHOD) method ;
 + (SMObjectRequest*) objectRequestWithBaseurl:(NSString*) baseurl path:(NSString*) path parameters:(NSDictionary*) parameters method:(SMHTTPMETHOD) method shouldShowLoader:(BOOL) shouldShowLoader;
 + (SMObjectRequest*) objectRequestWithBaseurl:(NSString*) baseurl path:(NSString*) path parameters:(NSDictionary*) parameters method:(SMHTTPMETHOD) method shouldShowLoader:(BOOL) shouldShowLoader multipartDataDictionary:(NSDictionary*) multipartDataDictionary isManaged:(BOOL) isManaged;
+- (void) setJsonParameters:(NSDictionary*) customParameters;
 @end

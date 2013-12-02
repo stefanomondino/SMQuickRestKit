@@ -105,6 +105,12 @@
     else {
         operation = [objectManager appropriateObjectRequestOperationWithObject:nil method:(objectRequest.method == SM_GET?RKRequestMethodGET :RKRequestMethodPOST) path: objectRequest.path parameters:objectRequest.parameters];
     }
+    NSData* jsonParameters = [objectRequest valueForKey:@"serializedParameters"];
+    if (jsonParameters) {
+        NSMutableURLRequest* request =  (NSMutableURLRequest*) operation.HTTPRequestOperation.request;
+        [request setHTTPBody:jsonParameters];
+        [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    }
     [operation setCompletionBlockWithSuccess:success failure:failure];
     [operation.HTTPRequestOperation setDownloadProgressBlock:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
         //if (self.operationDictionary[operation] == nil) {
