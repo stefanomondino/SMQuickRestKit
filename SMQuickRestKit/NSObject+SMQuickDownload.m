@@ -81,7 +81,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             //objc_setAssociatedObject(operation, kSMAssociatedRequestingObject, nil, OBJC_ASSOCIATION_RETAIN);
             //[self.operationArray removeObject:operation];
-            [weakSelf.operationDictionary removeObjectForKey:operation];
+            [weakSelf.operationDictionary removeObjectForKey:[NSString stringWithFormat:@"%p",operation]];
             if (objectRequest.shouldShowLoader && !isSimultaneous){
                 [weakSelf hideLoadingView];
             }
