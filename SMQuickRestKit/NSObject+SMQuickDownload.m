@@ -58,36 +58,41 @@
     }
     __weak NSObject* weakSelf = self;
     void (^success)(RKObjectRequestOperation *, RKMappingResult*) = ^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-        //        [self.operationArray removeObject:operation];
-        [weakSelf.operationDictionary removeObjectForKey:[NSString stringWithFormat:@"%p",operation]];
-        //objc_setAssociatedObject(operation, kSMAssociatedRequestingObject, nil, OBJC_ASSOCIATION_RETAIN);
-        
-        if (objectRequest.shouldShowLoader && !isSimultaneous){
-            [weakSelf hideLoadingView];
-        }
-        
-        [weakSelf downloadDidCompleteWithMappingResults:[mappingResult array] objectRequest:objectRequest];
-        
-        if ([weakSelf.operationDictionary allKeys].count == 0 && isSimultaneous) {
-            [self simultaneousDownloadsDidComplete];
-            [self hideSimultaneousLoadingView];
-        }
-        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            
+            //        [self.operationArray removeObject:operation];
+            [weakSelf.operationDictionary removeObjectForKey:[NSString stringWithFormat:@"%p",operation]];
+            //objc_setAssociatedObject(operation, kSMAssociatedRequestingObject, nil, OBJC_ASSOCIATION_RETAIN);
+            
+            if (objectRequest.shouldShowLoader && !isSimultaneous){
+                [weakSelf hideLoadingView];
+            }
+            
+            [weakSelf downloadDidCompleteWithMappingResults:[mappingResult array] objectRequest:objectRequest];
+            
+            if ([weakSelf.operationDictionary allKeys].count == 0 && isSimultaneous) {
+                [self simultaneousDownloadsDidComplete];
+                [self hideSimultaneousLoadingView];
+            }
+        });
     };
     void (^failure)(RKObjectRequestOperation*, NSError*) = ^(RKObjectRequestOperation *operation, NSError *error) {
-        //objc_setAssociatedObject(operation, kSMAssociatedRequestingObject, nil, OBJC_ASSOCIATION_RETAIN);
-        //[self.operationArray removeObject:operation];
-        [weakSelf.operationDictionary removeObjectForKey:operation];
-        if (objectRequest.shouldShowLoader && !isSimultaneous){
-            [weakSelf hideLoadingView];
-        }
-        
-        [weakSelf downloadDidFailWithError:error objectRequest:objectRequest];
-        
-        if ([weakSelf.operationDictionary allKeys].count == 0) {
-            [self simultaneousDownloadsDidComplete];
-            [self hideSimultaneousLoadingView];
-        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //objc_setAssociatedObject(operation, kSMAssociatedRequestingObject, nil, OBJC_ASSOCIATION_RETAIN);
+            //[self.operationArray removeObject:operation];
+            [weakSelf.operationDictionary removeObjectForKey:operation];
+            if (objectRequest.shouldShowLoader && !isSimultaneous){
+                [weakSelf hideLoadingView];
+            }
+            
+            [weakSelf downloadDidFailWithError:error objectRequest:objectRequest];
+            
+            if ([weakSelf.operationDictionary allKeys].count == 0) {
+                [self simultaneousDownloadsDidComplete];
+                [self hideSimultaneousLoadingView];
+            }
+        });
     };
     RKObjectRequestOperation* __weak operation;
     if (objectRequest.multipartDataDictionary) {
@@ -129,7 +134,7 @@
     }];
     
     //objc_setAssociatedObject(operation,kSMAssociatedRequestingObject, self, OBJC_ASSOCIATION_RETAIN);
-    
+    [weakSelf.operationDictionary setValue:@{@"read":@(0),@"total":@(NSIntegerMax)} forKey:[NSString stringWithFormat:@"%p",operation]];
     [objectManager enqueueObjectRequestOperation:operation];
     return operation;
 }
