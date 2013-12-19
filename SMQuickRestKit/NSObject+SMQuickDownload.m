@@ -85,7 +85,9 @@
             if (objectRequest.shouldShowLoader && !isSimultaneous){
                 [weakSelf hideLoadingView];
             }
-            
+            if (operation.HTTPRequestOperation.isCancelled) {
+                [weakSelf downloadDidCancelWithObjectRequest:objectRequest];
+            }
             [weakSelf downloadDidFailWithError:error objectRequest:objectRequest];
             
             if ([weakSelf.operationDictionary allKeys].count == 0) {
@@ -120,7 +122,7 @@
     [operation.HTTPRequestOperation setDownloadProgressBlock:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
         //if (self.operationDictionary[operation] == nil) {
         if (totalBytesExpectedToRead<0) return;
-        [weakSelf.operationDictionary setValue:@{@"read":@(totalBytesRead),@"total":@(totalBytesExpectedToRead)} forKey:[NSString stringWithFormat:@"%p",operation]];
+        [weakSelf.operationDictionary setValue:@{@"operation":operation,@"read":@(totalBytesRead),@"total":@(totalBytesExpectedToRead)} forKey:[NSString stringWithFormat:@"%p",operation]];
         //}
         __block long long total = 0;
         __block long long read = 0;
@@ -134,7 +136,7 @@
     }];
     
     //objc_setAssociatedObject(operation,kSMAssociatedRequestingObject, self, OBJC_ASSOCIATION_RETAIN);
-    [weakSelf.operationDictionary setValue:@{@"read":@(0),@"total":@(NSIntegerMax)} forKey:[NSString stringWithFormat:@"%p",operation]];
+    [weakSelf.operationDictionary setValue:@{@"operation":operation,@"read":@(0),@"total":@(NSIntegerMax)} forKey:[NSString stringWithFormat:@"%p",operation]];
     [objectManager enqueueObjectRequestOperation:operation];
     return operation;
 }
@@ -149,7 +151,12 @@
     return downloads;
 }
 
-
+- (void) cancelAllDownloads {
+    [self.operationDictionary enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        RKObjectRequestOperation* operation = obj[@"operation"];
+        [operation.HTTPRequestOperation cancel];
+    }];
+}
 
 - (void) downloadDidProgressWithPercentage:(CGFloat) percentage {
 }
@@ -157,6 +164,9 @@
 - (void) downloadDidCompleteWithMappingResults: (NSArray*) mappingResults objectRequest:(SMObjectRequest*) objectRequest {
 }
 - (void) downloadDidFailWithError: (NSError*) error objectRequest:(SMObjectRequest*) objectRequest {
+}
+- (void) downloadDidCancelWithObjectRequest:(SMObjectRequest*) objectRequest {
+    
 }
 - (void) simultaneousDownloadsDidComplete {
     
