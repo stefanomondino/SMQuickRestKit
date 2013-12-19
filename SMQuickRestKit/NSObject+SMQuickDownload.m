@@ -12,7 +12,7 @@
 #import <RestKit.h>
 #import "SMQuickObjectMapper.h"
 #define kSMOperationDictionaryKey @"kSMOperationDictionaryKey"
-//#define kSMAssociatedRequestingObject @"kSMAssociatedRequestingObject"
+#define kSMAssociatedRequestingObject @"kSMAssociatedRequestingObject"
 
 
 #import <RKObjectManager.h>
@@ -63,7 +63,7 @@
             
             //        [self.operationArray removeObject:operation];
             [weakSelf.operationDictionary removeObjectForKey:[NSString stringWithFormat:@"%p",operation]];
-            //objc_setAssociatedObject(operation, kSMAssociatedRequestingObject, nil, OBJC_ASSOCIATION_RETAIN);
+            objc_setAssociatedObject(operation, kSMAssociatedRequestingObject, nil, OBJC_ASSOCIATION_RETAIN);
             
             if (objectRequest.shouldShowLoader && !isSimultaneous){
                 [weakSelf hideLoadingView];
@@ -79,7 +79,7 @@
     };
     void (^failure)(RKObjectRequestOperation*, NSError*) = ^(RKObjectRequestOperation *operation, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            //objc_setAssociatedObject(operation, kSMAssociatedRequestingObject, nil, OBJC_ASSOCIATION_RETAIN);
+            objc_setAssociatedObject(operation, kSMAssociatedRequestingObject, nil, OBJC_ASSOCIATION_RETAIN);
             //[self.operationArray removeObject:operation];
             [weakSelf.operationDictionary removeObjectForKey:[NSString stringWithFormat:@"%p",operation]];
             if (objectRequest.shouldShowLoader && !isSimultaneous){
@@ -135,7 +135,7 @@
         [weakSelf downloadDidProgressWithPercentage:perc];
     }];
     
-    //objc_setAssociatedObject(operation,kSMAssociatedRequestingObject, self, OBJC_ASSOCIATION_RETAIN);
+    objc_setAssociatedObject(operation,kSMAssociatedRequestingObject, self, OBJC_ASSOCIATION_RETAIN);
     [weakSelf.operationDictionary setValue:@{@"operation":operation,@"read":@(0),@"total":@(NSIntegerMax)} forKey:[NSString stringWithFormat:@"%p",operation]];
     [objectManager enqueueObjectRequestOperation:operation];
     return operation;
@@ -154,7 +154,9 @@
 - (void) cancelAllDownloads {
     [self.operationDictionary enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         RKObjectRequestOperation* operation = obj[@"operation"];
-        [operation.HTTPRequestOperation cancel];
+        if (objc_getAssociatedObject(self, kSMAssociatedRequestingObject) == self) {
+            [operation.HTTPRequestOperation cancel];
+        }
     }];
 }
 
