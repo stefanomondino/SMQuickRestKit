@@ -70,7 +70,7 @@ static SMQuickObjectMapper* sharedMapper = nil;
        RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithPersistentStoreCoordinator:[NSPersistentStoreCoordinator MR_newPersistentStoreCoordinator]];
         objectManager.managedObjectStore = managedObjectStore;
         [managedObjectStore createManagedObjectContexts];
-        [NSValueTransformer setValueTransformer:[[SMArrayValueTransformer alloc] init] forName:@"NSArrayValueTransformer"];
+        [NSValueTransformer setValueTransformer:[[SMArrayValueTransformer alloc] init] forName:@"SMArrayValueTransformer"];
     }
     return client;
 }
