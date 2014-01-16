@@ -51,23 +51,25 @@ static SMQuickObjectMapper* sharedMapper = nil;
     return [[[self sharedObjectMapper] allObjectManagers] objectForKey:baseurl];
     
 }
-
-+ (AFHTTPClient*) initWithBaseurl:(NSString*) baseurl shouldUseCoreData:(BOOL) shouldUseCoreData {
++ (AFHTTPClient*) initWithBaseurl:(NSString*) baseurl shouldUseCoreData:(BOOL) shouldUseCoreData; {
+    return [self initWithURL:[NSURL URLWithString:baseurl] shouldUseCoreData:shouldUseCoreData];
+}
++ (AFHTTPClient*) initWithURL:(NSURL *)baseurl shouldUseCoreData:(BOOL)shouldUseCoreData{
     /* Initialize RestKit framework */
-    RKObjectManager * objectManager = [self objectManagerWithBaseurl:baseurl];
-    NSURL *baseURL = [NSURL URLWithString:baseurl];
+    RKObjectManager * objectManager = [self objectManagerWithBaseurl:[baseurl absoluteString]];
+    NSURL *baseURL = baseurl;
     if (objectManager){
         [[objectManager operationQueue] cancelAllOperations];
     }
     AFHTTPClient* client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
     objectManager = [[RKObjectManager alloc] initWithHTTPClient:client];
-    [[self sharedObjectMapper].objectManagers setObject:objectManager forKey:baseurl];
+    [[self sharedObjectMapper].objectManagers setObject:objectManager forKey:[baseurl absoluteString]];
     [client setDefaultHeader:@"Accept" value: RKMIMETypeJSON];
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     //[RKMIMETypeSerialization registerClass:[RKXMLReaderSerialization class] forMIMEType:@"application/xml"];
     if (shouldUseCoreData){
         [MagicalRecord setupAutoMigratingCoreDataStack];
-       RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithPersistentStoreCoordinator:[NSPersistentStoreCoordinator MR_newPersistentStoreCoordinator]];
+        RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithPersistentStoreCoordinator:[NSPersistentStoreCoordinator MR_newPersistentStoreCoordinator]];
         objectManager.managedObjectStore = managedObjectStore;
         [managedObjectStore createManagedObjectContexts];
         [NSValueTransformer setValueTransformer:[[SMArrayValueTransformer alloc] init] forName:@"SMArrayValueTransformer"];

@@ -15,6 +15,8 @@
 + (SMQuickObjectMapper *) sharedObjectMapper;
 - (NSDictionary*) allObjectManagers;
 + (AFHTTPClient*) initWithBaseurl:(NSString*) baseurl shouldUseCoreData:(BOOL) shouldUseCoreData;
++ (AFHTTPClient*) initWithURL:(NSURL *)baseurl shouldUseCoreData:(BOOL) shouldUseCoreData;
 + (void) registerClass:(Class) class forMIMEType:(id)MIMETypeStringOrRegularExpression;
 + (RKObjectManager*) objectManagerWithBaseurl:(NSString*) baseurl;
+
 @end
