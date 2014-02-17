@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source_files = 'SMQuickRestKit/*.{m,h}'
   s.dependency 'RestKit'
-  s.dependency 'MagicalRecord'
+  s.dependency 'MagicalRecord/Shorthand'
   s.frameworks = 'SystemConfiguration' , 'MobileCoreServices'
 
 
