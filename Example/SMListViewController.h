@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SMListViewController : UIViewController <UITableViewDataSource>
-
+@interface SMListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+/**
+ Set in storyboard
+ */
+@property (nonatomic,assign) BOOL useCache;
 @end

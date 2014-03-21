@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "SMObjectRequest.h"
+/**
+ @deprecated
+ */
 @class  RKObjectRequestOperation;
 @interface NSObject (SMQuickDownload)
 - (RKObjectRequestOperation*) downloadDataWithObjectRequest:(SMObjectRequest*) objectRequest;

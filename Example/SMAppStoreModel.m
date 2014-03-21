@@ -9,7 +9,14 @@
 #import "SMAppStoreModel.h"
 
 @implementation SMAppStoreModel
-+ (void)setupMapping:(RKObjectMapping *)mapping forBaseurl:(NSString *)baseurl {
-    [mapping addAttributeMappingsFromDictionary:@{@"trackName":@"name",@"artworkUrl100":@"artworkUrl"}];
+@dynamic name;
+@dynamic artworkUrl;
+@dynamic genre;
++ (void)setupMapping:(RKEntityMapping *)mapping forBaseurl:(NSString *)baseurl {
+    [mapping addAttributeMappingsFromDictionary:@{@"primaryGenreName":@"genre",@"trackName":@"name",@"artworkUrl100":@"artworkUrl"}];
+    
+    //We could also map the "trackId" field from remote json and use it to uniquely identify a movie in the database instead of name + genre.
+    [mapping setIdentificationAttributes:@[@"name",@"genre"]];
+    
 }
 @end

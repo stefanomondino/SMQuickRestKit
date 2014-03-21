@@ -31,6 +31,9 @@
 		7BCC2382181AFA86003E5A9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BCC2362181AFA86003E5A9F /* Foundation.framework */; };
 		7BCC2383181AFA86003E5A9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BCC2366181AFA86003E5A9F /* UIKit.framework */; };
 		7BCC2384181AFA86003E5A9F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BCC2368181AFA86003E5A9F /* CoreData.framework */; };
+		7BCE9C8618DA00590073CEA9 /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BCE9C8518DA00590073CEA9 /* apple.png */; };
+		7BCE9C8918DA02140073CEA9 /* SMMovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCE9C8818DA02140073CEA9 /* SMMovieTableViewCell.m */; };
+		7BE7368118DC54D20088E44F /* SMAppStoreResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE7368018DC54D20088E44F /* SMAppStoreResponse.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +57,7 @@
 		7B6AA7F0181AFB4800064D06 /* SMQuickRestKit-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SMQuickRestKit-Info.plist"; sourceTree = "<group>"; };
 		7B6AA7F1181AFB4800064D06 /* SMQuickRestKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SMQuickRestKit-Prefix.pch"; sourceTree = "<group>"; };
 		7B6AA7F3181AFB4800064D06 /* SMQuickRestKit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SMQuickRestKit.xcdatamodel; sourceTree = "<group>"; };
-		7B6AA7FA181AFB8200064D06 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		7B6AA7FA181AFB8200064D06 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7B6AA7FC181AFCF500064D06 /* SMQuickObjectMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMQuickObjectMapper.h; sourceTree = "<group>"; };
 		7B6AA7FD181AFCF500064D06 /* SMQuickObjectMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMQuickObjectMapper.m; sourceTree = "<group>"; };
 		7B6AA7FF181AFF3400064D06 /* SMArrayValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMArrayValueTransformer.h; sourceTree = "<group>"; };
@@ -80,6 +83,11 @@
 		7BCC2368181AFA86003E5A9F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7BCC237F181AFA86003E5A9F /* SMQuickRestKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMQuickRestKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCC2380181AFA86003E5A9F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		7BCE9C8518DA00590073CEA9 /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple.png; sourceTree = "<group>"; };
+		7BCE9C8718DA02140073CEA9 /* SMMovieTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMMovieTableViewCell.h; sourceTree = "<group>"; };
+		7BCE9C8818DA02140073CEA9 /* SMMovieTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMMovieTableViewCell.m; sourceTree = "<group>"; };
+		7BE7367F18DC54D20088E44F /* SMAppStoreResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMAppStoreResponse.h; sourceTree = "<group>"; };
+		7BE7368018DC54D20088E44F /* SMAppStoreResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAppStoreResponse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,12 +127,17 @@
 				7B6AA7EF181AFB4800064D06 /* SMAppDelegate.m */,
 				7B6AA814181B0D1F00064D06 /* SMAppStoreModel.h */,
 				7B6AA815181B0D1F00064D06 /* SMAppStoreModel.m */,
+				7BE7367F18DC54D20088E44F /* SMAppStoreResponse.h */,
+				7BE7368018DC54D20088E44F /* SMAppStoreResponse.m */,
 				7B6AA80F181B091600064D06 /* Storyboard.storyboard */,
 				7B6AA811181B0A2400064D06 /* SMListViewController.h */,
 				7B6AA812181B0A2400064D06 /* SMListViewController.m */,
+				7BCE9C8718DA02140073CEA9 /* SMMovieTableViewCell.h */,
+				7BCE9C8818DA02140073CEA9 /* SMMovieTableViewCell.m */,
 				7B6AA7F0181AFB4800064D06 /* SMQuickRestKit-Info.plist */,
 				7B6AA7F1181AFB4800064D06 /* SMQuickRestKit-Prefix.pch */,
 				7B6AA7F2181AFB4800064D06 /* SMQuickRestKit.xcdatamodeld */,
+				7BCE9C8518DA00590073CEA9 /* apple.png */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -171,16 +184,24 @@
 				7B6AA800181AFF3400064D06 /* SMArrayValueTransformer.m */,
 				7B6AA7FC181AFCF500064D06 /* SMQuickObjectMapper.h */,
 				7B6AA7FD181AFCF500064D06 /* SMQuickObjectMapper.m */,
-				7B6AA802181B006800064D06 /* NSObject+SMQuickDownload.h */,
-				7B6AA803181B006800064D06 /* NSObject+SMQuickDownload.m */,
 				7B6AA80C181B080600064D06 /* SMSavedModel.h */,
 				7B6AA80D181B080600064D06 /* SMSavedModel.m */,
 				7B6AA808181B05C300064D06 /* SMUnsavedModel.h */,
 				7B6AA809181B05C300064D06 /* SMUnsavedModel.m */,
+				7BCE9C8418D9FC2C0073CEA9 /* Deprecated */,
+			);
+			path = SMQuickRestKit;
+			sourceTree = "<group>";
+		};
+		7BCE9C8418D9FC2C0073CEA9 /* Deprecated */ = {
+			isa = PBXGroup;
+			children = (
+				7B6AA802181B006800064D06 /* NSObject+SMQuickDownload.h */,
+				7B6AA803181B006800064D06 /* NSObject+SMQuickDownload.m */,
 				7B6AA805181B009500064D06 /* SMObjectRequest.h */,
 				7B6AA806181B009500064D06 /* SMObjectRequest.m */,
 			);
-			path = SMQuickRestKit;
+			name = Deprecated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +286,7 @@
 				7B6AA7F5181AFB4800064D06 /* Images.xcassets in Resources */,
 				7B6AA7F8181AFB4800064D06 /* SMQuickRestKit-Info.plist in Resources */,
 				7B6AA810181B091600064D06 /* Storyboard.storyboard in Resources */,
+				7BCE9C8618DA00590073CEA9 /* apple.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BCE9C8918DA02140073CEA9 /* SMMovieTableViewCell.m in Sources */,
 				7B6AA80E181B080600064D06 /* SMSavedModel.m in Sources */,
 				7B6AA7F9181AFB4800064D06 /* SMQuickRestKit.xcdatamodeld in Sources */,
 				7B6AA7FE181AFCF500064D06 /* SMQuickObjectMapper.m in Sources */,
@@ -323,6 +346,7 @@
 				7B6AA816181B0D1F00064D06 /* SMAppStoreModel.m in Sources */,
 				7B6AA807181B009500064D06 /* SMObjectRequest.m in Sources */,
 				7B6AA7F7181AFB4800064D06 /* SMAppDelegate.m in Sources */,
+				7BE7368118DC54D20088E44F /* SMAppStoreResponse.m in Sources */,
 				7B6AA801181AFF3400064D06 /* SMArrayValueTransformer.m in Sources */,
 				7B6AA7F6181AFB4800064D06 /* main.m in Sources */,
 				7B6AA804181B006800064D06 /* NSObject+SMQuickDownload.m in Sources */,

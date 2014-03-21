@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 /**
- \ref NSValueTransformer used to convert JSON array into data model array. 
+ @ref NSValueTransformer used to convert JSON array into data model array. 
 */
 @interface SMArrayValueTransformer : NSValueTransformer
 

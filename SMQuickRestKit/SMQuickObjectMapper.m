@@ -12,6 +12,14 @@
 #import "SMArrayValueTransformer.h"
 //#import "RKXMLReaderSerialization.h"
 
+//Thanks to airdrummingfool for this tip!
+@interface NSManagedObjectContext (Private)
+
++ (void)MR_setRootSavingContext:(NSManagedObjectContext *)context;
++ (void)MR_setDefaultContext:(NSManagedObjectContext *)moc;
+
+@end
+
 @interface SMQuickObjectMapper()
 @property (nonatomic,strong) NSMutableDictionary* objectManagers;
 @end
@@ -56,6 +64,11 @@ static SMQuickObjectMapper* sharedMapper = nil;
 }
 + (AFHTTPClient*) initWithURL:(NSURL *)baseurl shouldUseCoreData:(BOOL)shouldUseCoreData{
     /* Initialize RestKit framework */
+    
+    if ([self objectManagerWithBaseurl:[baseurl absoluteString]]) {
+        return [[self objectManagerWithBaseurl:[baseurl absoluteString] ] HTTPClient];
+    }
+                
     RKObjectManager * objectManager = [self objectManagerWithBaseurl:[baseurl absoluteString]];
     NSURL *baseURL = baseurl;
     if (objectManager){
@@ -66,14 +79,18 @@ static SMQuickObjectMapper* sharedMapper = nil;
     [[self sharedObjectMapper].objectManagers setObject:objectManager forKey:[baseurl absoluteString]];
     [client setDefaultHeader:@"Accept" value: RKMIMETypeJSON];
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
-    //[RKMIMETypeSerialization registerClass:[RKXMLReaderSerialization class] forMIMEType:@"application/xml"];
     if (shouldUseCoreData){
         [MagicalRecord setupAutoMigratingCoreDataStack];
         RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithPersistentStoreCoordinator:[NSPersistentStoreCoordinator MR_newPersistentStoreCoordinator]];
         objectManager.managedObjectStore = managedObjectStore;
         [managedObjectStore createManagedObjectContexts];
+        
+        [NSManagedObjectContext MR_setRootSavingContext: managedObjectStore.persistentStoreManagedObjectContext];
+        [NSManagedObjectContext MR_setDefaultContext: managedObjectStore.mainQueueManagedObjectContext];
+
         [NSValueTransformer setValueTransformer:[[SMArrayValueTransformer alloc] init] forName:@"SMArrayValueTransformer"];
     }
+
     return client;
 }
 

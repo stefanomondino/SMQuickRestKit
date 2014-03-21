@@ -7,6 +7,9 @@
 //
 
 #import "SMObjectRequest.h"
+/**
+ @deprecated
+ */
 @interface SMObjectRequest()
 @property (nonatomic,strong) NSData*serializedParameters;
 @end

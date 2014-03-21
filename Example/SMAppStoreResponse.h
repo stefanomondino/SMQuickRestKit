@@ -9,5 +9,6 @@
 #import "SMUnsavedModel.h"
 
 @interface SMAppStoreResponse : SMUnsavedModel
-
+@property (nonatomic,strong) NSArray* movies;
+@property (nonatomic,strong) NSNumber* resultCount;
 @end

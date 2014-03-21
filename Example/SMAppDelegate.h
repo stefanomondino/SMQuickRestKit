@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SMAppStoreModel.h"
-
+#import "SMAppStoreResponse.h"
 #define BASEURL @"https://itunes.apple.com/"
 #define SEARCH_PATH @"search"
 

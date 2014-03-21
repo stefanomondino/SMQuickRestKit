@@ -13,9 +13,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [SMQuickObjectMapper initWithBaseurl:BASEURL shouldUseCoreData:NO];
+    [SMQuickObjectMapper initWithBaseurl:BASEURL shouldUseCoreData:YES];
     [SMQuickObjectMapper registerClass:[RKNSJSONSerialization class] forMIMEType:@"text/javascript"];
-    [SMAppStoreModel mappingWithKeyPath:@"results" forBaseurl:BASEURL path:SEARCH_PATH];
+    BOOL rootMapping = NO;
+    
+    /*FOR EXAMPLE PURPOSES ONLY!*/
+    
+    /* Take a look at this remote json : 
+     https://itunes.apple.com/search?attribute=movieTerm&country=us&entity=movie&media=movie&term=the
+     
+     According to your needs, you can decide to map the result as a single SMAppStoreResponse object which will eventually contain the list of movies in a NSArray, or directly map the keypath "results" to the array. The choice is up to you, just switch the rootMapping flag to try them both.
+     
+     */
+     
+     
+     
+    if (rootMapping){
+        [SMAppStoreResponse mappingWithKeyPath:@"" forBaseurl:BASEURL path:SEARCH_PATH];
+    }
+    else {
+        [SMAppStoreModel mappingWithKeyPath:@"results" forBaseurl:BASEURL path:SEARCH_PATH];
+    }
     return YES;
 }
 

@@ -7,7 +7,10 @@
 //
 
 #import "SMAppStoreResponse.h"
-
+#import "SMAppStoreModel.h"
 @implementation SMAppStoreResponse
-
++ (void)setupMapping:(RKEntityMapping *)mapping forBaseurl:(NSString *)baseurl {
+ [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"results" toKeyPath:@"movies" withMapping:[SMAppStoreModel mappingForBaseurl:baseurl]]];
+    [mapping addAttributeMappingsFromArray:@[@"resultCount"]];
+}
 @end

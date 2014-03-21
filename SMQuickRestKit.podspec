@@ -10,10 +10,11 @@ Pod::Spec.new do |s|
 
   s.source   = { :git => 'git@github.com:stefanomondino/SMQuickRestKit.git' }
   s.requires_arc = true
+  s.ios.deployment_target = '5.0'
   s.source_files = 'SMQuickRestKit/*.{m,h}'
   s.dependency 'RestKit'
-  s.dependency 'MagicalRecord/Shorthand'
-  s.frameworks = 'SystemConfiguration' , 'MobileCoreServices'
+  s.dependency 'MagicalRecord'
+  
 
 
 end

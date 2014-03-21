@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface SMMovieTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *img_poster;
+@property (weak, nonatomic) IBOutlet UILabel *lbl_title;
+@property (weak, nonatomic) IBOutlet UILabel *lbl_genre;
 
 @end
