@@ -41,4 +41,4 @@ Usage
 Example
 =======
 
-You will find a detailed example in the "Example" folder
+You will find a detailed example in the "Example" folder (run pod install first!)
