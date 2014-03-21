@@ -11,13 +11,13 @@ Features
 
 *   Full integration with RestKit
 *   Seamless integration with MagicalRecord and CoreData
-* 	Setup your mappings at startup (in the AppDelegate) and never think again about them
+* 	Setup your mappings at startup (in the AppDelegate) and never think again about them again
 
 Installation
 ============
 
 Installation is handled by CocoaPods.
-Add this line to your podfile
+Add this line to your podfile (I'll submit a pull request to the main repository as soon as possible)
 
 	pod 'SMQuickRestKit',:git => 'https://github.com/stefanomondino/SMQuickRestKit.git', :branch => 'master'
 
@@ -34,7 +34,8 @@ Usage
 
 *	For each model, setup a mapping providing a keypath (use @"" if you want to map remote object from root) and the remote baseurl/path where you will find it
 
-*	Use NSObject+SMQuickDownload to download remote objects from any class in your code! Override the success/failure methods to use mapping result and you are ready to go!
+*	When you need to download some object from remote, use SMQuickObjectMapper + (RKObjectManager*) objectManagerWithBaseurl:(NSString*) baseurl to retrieve the correct RKObjectManager and you're good to go
+
 
 
 Example
