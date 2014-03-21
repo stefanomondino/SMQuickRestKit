@@ -3,6 +3,5 @@ inhibit_all_warnings!
 
 #RestKit
 pod 'RestKit'
-
-# Magical Record
+#Magical Record
 pod 'MagicalRecord'
